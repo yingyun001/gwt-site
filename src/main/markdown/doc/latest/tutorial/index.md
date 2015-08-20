@@ -37,14 +37,14 @@ You may also optionally do the following:
 
 ### 构建一个简单的 GWT 应用
 
-1.   [Build a Sample GWT Application](gettingstarted.html)
-   * Get started with Google Web Toolkit by developing the StockWatcher application from scratch. You'll learn to create a GWT project, build the UI with GWT wigdets and panels, code the client-side functionality in the Java language, debug in development mode, apply CSS styles, compile the Java into JavaScript, and run the application in production mode.
+1.   [构建一个简单的 GWT 应用](gettingstarted.html)
+   * 通过开发股票监测系统(stockWatcher)这个应用程序开启我们的 Google Web Toolkit 学习之路。在这里你会学习创建一个 GWT 项目，利用 GWT 的各种小工具(wigdets)和面板(panels)来构建用户界面，用 Java 语言编写客户端功能，在开发模式下 debug，应用 CSS 样式，将 Java 编译成 JavaScript，最后就是学习在生产模式下运行程序了。
 
 ### Client-Server 通信
 
-1.   Communicating with the server via [GWT RPC](RPC.html)
-    *  Add a call to a server using GWT RPC. You'll learn how to make asynchronous calls, serialize Java objects, and handle exceptions.
-2.   [Retrieving JSON data via HTTP](JSON.html)
+1.   通过 [GWT RPC](RPC.html) 与服务器端进行通信
+    *  使用 GWT RPC 添加一个对服务器端的调用。在这里你将会学到异步调用，序列化 Java 对象，并处理异常。
+2.   [通过 HTTP 检索 JSON 数据](JSON.html)
     *  Make HTTP requests to retrieve JSON data from a server. The same technique can be used to retrieve XML data.
 3.   [Making cross-site requests](Xsite.html)
     *  Make a call to a remote server, working around SOP (Same Origin Policy) constraints.
