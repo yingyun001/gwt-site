@@ -33,14 +33,14 @@ You may also optionally do the following:
 
 2.   [Create and run your first web application](../../../gettingstarted.html#create) - A few, simple steps to familiarize you with the command line commands.
 
-## GWT Tutorials <a id="gwt_tutorials"></a>
+## GWT 教程 <a id="gwt_tutorials"></a>
 
-### Build a Sample GWT Application
+### 构建一个简单的 GWT 应用
 
 1.   [Build a Sample GWT Application](gettingstarted.html)
    * Get started with Google Web Toolkit by developing the StockWatcher application from scratch. You'll learn to create a GWT project, build the UI with GWT wigdets and panels, code the client-side functionality in the Java language, debug in development mode, apply CSS styles, compile the Java into JavaScript, and run the application in production mode.
 
-### Client-Server Communication
+### Client-Server 通信
 
 1.   Communicating with the server via [GWT RPC](RPC.html)
     *  Add a call to a server using GWT RPC. You'll learn how to make asynchronous calls, serialize Java objects, and handle exceptions.
@@ -49,17 +49,17 @@ You may also optionally do the following:
 3.   [Making cross-site requests](Xsite.html)
     *  Make a call to a remote server, working around SOP (Same Origin Policy) constraints.
 
-### Internationalization
+### 国际化
 
 1.   [Internationalizing a GWT application](i18n.html)
     *  Translate the user interface of a GWT application into another language using Static String Internationalization.
 
-### JUnit Testing
+### JUnit 测试
 
 1.   [Unit testing with JUnit](JUnit.html)
     *  Add unit tests to a GWT application using JUnit.
 
-### Deploying to Google App Engine
+### 部署到 Google App Engine 中
 
 1.   [Deploying to Google App Engine](appengine.html)
     *  Deploy a GWT application to [App Engine](https://developers.google.com/appengine).
