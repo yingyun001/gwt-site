@@ -45,9 +45,9 @@ You may also optionally do the following:
 1.   通过 [GWT RPC](RPC.html) 与服务器端进行通信
     *  使用 GWT RPC 添加一个对服务器端的调用。在这里你将会学到异步调用，序列化 Java 对象，并处理异常。
 2.   [通过 HTTP 检索 JSON 数据](JSON.html)
-    *  Make HTTP requests to retrieve JSON data from a server. The same technique can be used to retrieve XML data.
-3.   [Making cross-site requests](Xsite.html)
-    *  Make a call to a remote server, working around SOP (Same Origin Policy) constraints.
+    *  通过发送 HTTP 请求从服务器端检索 JSON 数据。同样，我们还可以根据这个方法检索 XML 数据。
+3.   [跨站点请求](Xsite.html)
+    *  在 SOP 限制的基础上，调用一个远程的服务。
 
 ### 国际化
 
