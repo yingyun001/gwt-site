@@ -1,30 +1,31 @@
-Overview
+概述
 ===
 
-GWT is a development toolkit for building and optimizing complex browser-based applications. Its goal is to enable productive development of high-performance web applications without the developer having to be an expert in browser quirks, XMLHttpRequest, and JavaScript. GWT is used by many products at Google, including AdWords, AdSense, Flights, Hotel Finder, Offers, Wallet, Blogger. It's open source, completely free, and used by thousands of developers around the world.
+GWT 是一个用于构建并优化复杂的基于浏览器应用程序的开发工具包。它的初衷开发者无需精通浏览器的怪异模式，XMLHttpRequest 和 JavaScript 就可以高效率的开发 web 应用程序。Google 中的许多产品，包括 AdWords（广告关键字），AdSense（广告联盟），Flights（航班搜索服务），Hotel Finder（酒店达人），Offers（团购），Wallet（电子钱包），Blogger（博客）都使用了 GWT。并且 GWT 是开源的，完全免费的，并受到了全世界成千上万开发者拥护。
 
-[What's New in GWT 2.7.0](release-notes.html#Release_Notes_2_7_0)
+[在 GWT 2.7.0 中有什么新功能？](release-notes.html#Release_Notes_2_7_0)
 
-## What's inside the toolbox?
+## 工具包中都有什么呢？
 
 ### SDK
 
-The [GWT SDK](learnmore-sdk.html) contains the Java API libraries, compiler, and development server. It lets you write client-side applications in Java and deploy them as JavaScript.
+[GWT SDK](learnmore-sdk.html) 包含了 Java 的 API 库，编译器和开发服务器。它允许您用 Java 写客户端的应用程序并将其部署为 JavaScript。
 
-*   [Get Started](gettingstarted.html)
-*   [Tutorials](doc/latest/tutorial/index.html)
-*   [Developer Guide](doc/latest/DevGuide.html)
+*   [开始](gettingstarted.html)
+*   [教程](doc/latest/tutorial/index.html)
+*   [开发手册](doc/latest/DevGuide.html)
 
-### Plugin for Eclipse
+### Eclipse 的插件
 
-The [Plugin for Eclipse](https://developers.google.com/eclipse/index) provides IDE support for GWT and App Engine web projects.
+[Eclipse 插件](https://developers.google.com/eclipse/index) 提供了对 GWT 和 App Engine web 项目的 IDE 支持。
 
-*   [Get Started](usingeclipse.html)
+*   [开始](usingeclipse.html)
 
-## Developing with GWT
+## 用 GWT 开发
 
-### <i class="icon_write"></i> Write
+### <i class="icon_write"></i> 写代码
 
+GWT SDK 提供了一组核心 Java API 和界面工具集。利用 SDK 您就可以用 Java 语言写 AJAX 应用程序并会将源代码编译成高度优化过的可运行在各种浏览器（包括 Android 系统和 iPhone 系统上的移动端浏览器）中的 JavaScript。
 The GWT SDK provides a set of core Java APIs and Widgets. These allow you to write AJAX applications in Java and then compile the source to highly optimized JavaScript that runs across all browsers, including mobile browsers for Android and the iPhone.
 
 Constructing AJAX applications in this manner is more productive thanks to a higher level of abstraction on top of common concepts like DOM manipulation and XHR communication.
