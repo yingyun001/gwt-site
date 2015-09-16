@@ -1,62 +1,69 @@
-Create
+创建
 ===
 
-At this point, you've downloaded the most recent distribution of Google Web Toolkit.
+您应该已经下载了最新的 GWT 版本。
 
-In this section, you'll create the StockWatcher project using either the Google
-Plugin for Eclipse or the GWT command-line utility webAppCreator. These utilities do the work of generating the project subdirectories and files you need to get started.
-To test that your project is configured correctly, you'll run the GWT starter application in development mode. Then you'll examine the project files that were created.
+在这一部分，您将会使用 Google Plugin for Eclipse 或者 GWT 命令行工具（webAppCreator）来创建股票查看器项目。这些工具能够生成您所需要的项目子目录以及文件。为了测试您的项目是否配置正确，您还要以开发模式来运行 GWT 初始应用程序。然后您可以检测创建出来的项目文件。
 
-1.  [Create a GWT application.](#create)
-2.  [Test the default project components.](#test)
-3.  [Examine the project components.](#components)
+1.  [创建一个 GWT 应用程序。](#create)
+2.  [测试默认的项目组件。](#test)
+3.  [检测项目组件。](#components)
 
-##  Creating a GWT application <a id="create"></a>
+##  创建 GWT 应用程序 <a id="create"></a>
 
-### Creating the StockWatcher application (using Eclipse)
+### 使用 Eclipse 来创建股票查看器应用程序。
 
-One of the benefits of using GWT is that you can leverage the tools, such as refactoring, code completion, and debugging, available in a Java IDE. In this tutorial, we use Eclipse because it is widely available and free. However, feel free to use your favorite IDE.
+使用 GWT 的好处之一就是您可以使用 Java IDE 提供的工具（例如重构，代码补全和调试）。在本教程中，我们将会使用 Eclipse，因为它是开源的。不过您也可以使用自己喜爱的 Java IDE。
 
-The Google Plugin for Eclipse contains a wizard for creating GWT applications.  Here are steps for creating a starter application.
+Google Plugin for Eclipse 包含了创建 GWT 应用程序的向导。下面是创建起始应用程序的步骤。
 
-1.  In the toolbar, click the New Web Application Project button ![icon](images/NewWebApplicationProject.png).
-2.  Fill out the project details:
+1.  在工具栏中点击新建网页应用程序按扭 ![icon](images/NewWebApplicationProject.png).
+2.  填写项目细节：
 
-    1.  Enter the project name "StockWatcher".
-    2.  Enter the package "com.google.gwt.sample.stockwatcher".
-    3.  Make sure `Use Google Web Toolkit` is checked and that `Use default SDK (GWT)` is selected.
-    4.  (Optional) If you are using Google App Engine, make sure `Use Google App Engine` is checked and that `Use default SDK (App Engine)` is selected.
-    5.  If you did not install the SDKs when you installed the Google Plugin for Eclipse, you should click `Configure SDKs...` to specify the directory where GWT (and the App Engine SDK if necessary) was unzipped.
-3.  Click the `Finish` button.
+    1.  输入项目的名称："StockWatcher"。
+    2.  输入包名： "com.google.gwt.sample.stockwatcher"。
+    3.  确保 `Use Google Web Toolkit` 单选框已经被勾选且选择了其中的 `Use default SDK (GWT)` 选项。
+    4.  （另外）如果您正在使用 Google App Engine 的话，请您确保 `Use Google App Engine` 已经被够勾选且选择了其中的 `Use default SDK (App Engine)` 选项。
+    5.  如果您安装了 Google Plugin for Eclipse，却还没有安装 SDK 的话，您应该点击 `Configure SDKs...`，来确定 GWT 被解压的目录。
 
-### Creating the StockWatcher application (without using Eclipse)
+3.  点击`完成`按扭。
 
-webAppCreator is a command-line tool included in the GWT download that generates the project subdirectories and files you need to get started. It creates a starter application, which you can run to ensure that all the components have been created and are hooked together correctly. As you develop your application, you'll replace the code for the starter application with your code.
+### 在不使用 Eclipse 的情况下创建股票查看器应用程序。
 
-Starting with GWT 1.6, the former command-line tools projectCreator and applicationCreator have been combined into webAppCreator.
+webAppCreator 是一个包含在下载的 GWT 中的命令行工具，它生成了您所需要的项目子目录和文件。它创建了一个起始应用程序，您可以通过运行它来确保所有组件是否已经被创建并正确的挂接到了一起。当您开发您自己的应用程序的时候，您可以将初始代码替换为您的代码。
 
-For the StockWatcher project, you will run webAppCreator with the following parameters.
+自 GWT 1.6 开始，先前使用的命令行工具 projectCreator 和 applicationCreator 都被整合到了 webAppCreator 中。
 
-| Parameter  | Definition                                                                                                                                                                                                | Example |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| -out       | The directory to place the generated files.                                                                                                                                                               | StockWatcher |
-| -junit     | The fully-qualified path name to junit.jar on your system. You can download JUnit at their [sourceforge](http://junit.sourceforge.net/) project page, or you can use the version that ships with Eclipse. | <ul><li>(PC) C:\eclipse\plugins\org.junit_3.8.2.v200706111738\junit.jar</li><li>(Mac) /Users/myname/eclipse/plugins/org.junit_3.8.2.v200706111738/junit.jar</li> |
-| moduleName | The name of the GWT module you want to create.                                                                                                                                                            | com.google.gwt.sample.stockwatcher.StockWatcher |
+针对 StockWatcher 项目，您运行 webAppCreator 的时候会用到以下参数。
 
-1.  Create the StockWatcher application.
-    *  At the command line, run webAppCreator.
-    *  Enter the command below on a **single** line. (The example is shown on multiple lines only to improve readability.)
-    *  Replace the junit.jar path name (highlighted in the example below) with the fully-qualified path name of junit.jar on your system.
+| 参数 | 定义 | 实例 |
+| ---- | ---- | ---- |
+| -out | 放置生成文件的目录。 | StockWatcher | 
+| -junit | 您系统上 junit.jar 的绝对路径名。您可以在 [sourceforge](http://junit.sourceforge.net/) 下载 JUnit，您还可以使用和您的 Eclipse 相匹配的 JUnit。 | <ul><li>(PC) C:\eclipse\plugins\org.junit_3.8.2.v200706111738\junit.jar</li><li>(Mac) /Users/myname/eclipse/plugins/org.junit_3.8.2.v200706111738/junit.jar</li> |
+| moduleName | 您想要创建的 GWT 模块的名称。 | com.google.gwt.sample.stockwatcher.StockWatcher |
+
+1.  创建应用程序 —— 股票查看器
+    *  在命令行中运行 webAppCreator。
+    *  在单独一行中输入命令。（实例为了增加可读性，采取分行显示的方式。）
+    *  用您系统中的 junit.jar 的绝对路径来替换下面实例中的 junit.jar 路径名。
+
+    Windows：
 
         webAppCreator -out StockWatcher
                       -junit "C:\eclipse\plugins\org.junit_3.8.2.v200706111738\junit.jar"
                       com.google.gwt.sample.stockwatcher.StockWatcher
 
-    **Note:** The _-junit_ argument is optional.  If you do not have junit installed on your system or do not wish to use junit in your application, you can leave it out.
+    Linux：
 
-    **Tip:** If you include the GWT command-line tools in your PATH environment variable, you won't have to invoke them by specifying their full path.
+        ./webAppCreator -out StockWatcher
+                        -junit "C:\eclipse\plugins\org.junit_3.8.2.v200706111738\junit.jar"
+                        com.google.gwt.sample.stockwatcher.StockWatcher
 
-2.  GWT webAppCreator generates the project subdirectories and files you need to get started.
+    **注意：** _-junit_ 参数是可选的。如果您的系统中没有安装 junit 或者您不想在该应用程序中使用 junit，您可以不添加这个 junit 选项。
+
+    **提示：** 如果您在环境变量中添加了 GWT 命令行，您就不必写绝对路径了。
+
+2.  GWT webAppCreator 生成了您所需的项目子目录和文件。
 
 ```
 Created directory StockWatcher/src
@@ -87,46 +94,46 @@ Created file StockWatcher/war/WEB-INF/lib/gwt-servlet.jar
 
 ```
 
-### Directories Created
+### 创建的目录
 
 *   /src/com/google/gwt/sample/stockwatcher
-Contains the GWT module definition and initial application files.
+包含了 GWT 的模块定义并初始化应用程序文件。
 *   /test/com/google/gwt/sample/stockwatcher
-Contains JUnit test directory and a starter test class.
+包含了 Junit 测试目录和初始测试类。
 *   /war
-Contains static resources that can be served publicly, such as image files, style sheets, and HTML host pages.
+包含了公共的静态资源，例如图片文件，样式表和 HTML 主页。
 *   /war/WEB-INF
-Contains Java web application files.
+包含了 Java web 应用程序文件。
 *   /war/WEB-INF/lib
-Contains Java web application libraries.
+包含了 Java web 应用程序二进制文件。
 
-Starting with GWT 1.6, static files have been moved to /war.
+从 GWT 1.6 开始，静态文件都移到了 /war 目录下。
 
-### Files Created
+### 创建的文件
 
 *   StockWatcher.gwt.xml
-GWT module definition
+GWT 模块定义
 *   StockWatcher.html
-host page
+主页面
 *   StockWatcher.css
-application style sheet
+应用程序样式表
 *   web.xml
-Java web application descriptor
+Java web 应用程序描述文件
 *   StockWatcher.java
-GWT entry point class
+GWT 入口类
 *   GreetingService.java, GreetingServiceAsync.java, GreetingServiceImpl.java
-GWT sample RPC classes
+GWT 简单的 RPC 类
 *   gwt-servlet.jar
-GWT server runtime library
+GWT 服务器运行时库
 *   StockWatcherTest.java
-Starter test case for StockWatcher
+StockWatcher 的初始测试用例
 
-### Scripts Created
+### 创建的脚本
 
 *   build.xml
-Ant build file for running the application in development mode or for invoking the GWT compiler from the command line.
+Ant 构建了开发模式下用于运行应用程序的文件或是命令行中调用 GWT 编译器的文件。
 
-### Eclipse Files Created
+### 创建的 Eclipse 文件
 
 *   .project
 *   .classpath
@@ -134,55 +141,48 @@ Ant build file for running the application in development mode or for invoking t
 *   StockWatcherTest-dev.launch
 *   StockWatcherTest-prod.launch
 
-To see the complete list of options for webAppCreator, see Command-line Tools,
-[webAppCreator](../RefCommandLineTools.html#webAppCreator).
+想要看到 webAppCreator 的全部选项，请见：命令行工具，[webAppCreator](../RefCommandLineTools.html#webAppCreator)。
 
-For more information on project structure, see the Developer's Guide, [Directory/Package Conventions](../DevGuideOrganizingProjects.html#DevGuideDirectoriesPackageConventions).
+想要了解更多关于项目结构的信息，请见：开发者指南 [目录/包 惯例](../DevGuideOrganizingProjects.html#DevGuideDirectoriesPackageConventions).
 
-##  Testing the default project components <a id="test"></a>
+##  测试默认项目组件 <a id="test"></a>
 
-To check that all the project components were created, run the starter application in development mode. In development mode, you can interact with the application in a browser just as you would when it's eventually deployed.
+想要查看创建的所有项目组件，需要在开发模式下运行初始应用程序。在开发模式中，您可以在浏览器中和应用程序就行交互，就像程序部署好后你所要做的一样。
 
-### Running the development mode code server (from Eclipse)
+### 在 Eclipse 中运行开发模式代码服务器
 
-1.  In the Package Explorer view, select the StockWatcher project.
-2.  In the toolbar, click the Run button (Run as Web Application).
-3.  When the development mode tab opens, right-click on the URL to copy it.
+1.  在包浏览视图中，选择 StockWatcher 项目。
+2.  在工具栏中，点击运行按扭（Run as Web Application）。
+3.  当开发模式标签打开时，右键点击 URL 进行复制。
 
     ![img](images/DevModeTab.png)
 
-4.  Paste the URL into your browser of choice.
+4.  将 URL 粘贴至浏览器中。
 
-### Running the development mode code server (not from Eclipse)
+### 在命令行中运行开发模式代码服务器
 
-webAppCreator creates an ant build file with a target for running the application in development mode.
+webAppCreator 创建了一个 ant build 文件，其中 target 的内容是在开发模式下运行应用程序。
 
-1.  From the command line, change to the StockWatcher directory
-2.  Execute:
+1.  在命令行中切换到 StockWatcher 目录
+2.  执行：
 
 ```
 ant devmode
 ```
 
-**Tip:** If you include the Ant command-line tools in your PATH environment variable, you won't have to invoke them by specifying their full path.
+**提示：** 如果您在环境变量中添加了 Ant 命令行工具，您就不必写它的绝对路径了。
 
-
-Development mode opens with two tabs: the development mode code server and the Jetty HTTP server. Press the "Launch Default Browser"
-button to launch StockWatcher in development mode using your default browser. Or, you can click "Copy to Clipboard" to copy the launch URL and
-paste it into the browser of your choice.
+在开发模式下会有两个标签：开发模式代码服务器和 Jetty HTTP 服务器。点击“启动默认浏览器”按扭，您就可以使用您默认的浏览器启动开发模式下的 StockWatcher。或者，您也可以点击“复制到剪贴板”，并将其粘贴到您的浏览器中。
 
 ![img](images/DevModeNoEclipse.png)
 
-### Connecting to the development mode code server (with and without Eclipse)
+### 连接到开发模式代码服务器
 
-Once you have started the development mode (from Eclipse or using the build.xml script) and entered the URL into the browser, the
-browser will attempt to connect. If this is your first time running a GWT application in development mode, you may be prompted to
-install the Google Web Toolkit Developer Plugin. Follow the instructions on the page to install the plugin, then restart the browser
-and return to the same URL.
+一旦您开启了开发模式（不管是在 Eclipse 中还是在 build.xml 的脚本中）并在浏览器中进入了 URL，浏览器会尝试去连接代码服务器。如果这是您第一次在开发模式下运行一个 GWT 应用程序，您需要在浏览器中安装 Toolkit Developer 插件。跟随本教程来安装该插件，然后重启浏览器，再进入到刚才的 URL 中。
 
 ![img](images/MissingPlugin.png)
 
-### Starter Application <a id="starter"></a>
+### rter Application <a id="starter"></a>
 
 When you create a new web application with GWT, by default it creates a simple, starter application as shown below.  This application helps you test that all the components are installed and configured before you start development. When you start writing the StockWatcher application, you'll replace this starter application code with your own.
 
