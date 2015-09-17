@@ -10,12 +10,9 @@ When your application is sent across a network to a user, it runs as JavaScript 
 
 [Compatibility with the Java Language and Libraries](DevGuideCodingBasicsCompatibility.html) describes the differences in syntax and semantics between GWT and the core Java language.  It is important to remember that the target language of your GWT application is ultimately JavaScript, so there are some differences between running your application in [dev-mode](DevGuideCompilingAndDebugging.html#DevGuideDevMode), [superdev-mode](../../articles/superdevmode.html), and [production](DevGuideCompilingAndDebugging.html#DevGuideProdMode) mode. 
 
-## History<a id="DevGuideHistory"></a>
+## 历史记录<a id="DevGuideHistory"></a>
 
-[History](DevGuideCodingBasicsHistory.html) describes how to integrate Ajax applications with the browser history.  Ajax applications sometimes fail to meet user's expectations because they do not interact with the browser in the same way as static web pages. It is often apparent &mdash; and
-frustrating for users &mdash; when an Ajax application does not integrate with browser history. For example, users expect browsers to be able to navigate back to previously visited pages
-using back and forward actions. Because an Ajax application is a usually a single page running JavaScript logic and not a series of pages, the browser history needs help from the
-application to support this use case.  GWT's history mechanism makes history support fairly straightforward.
+[History](DevGuideCodingBasicsHistory.html) 描述了如何将 Ajax 应用程序和浏览器结合到一起。有时，Ajax 应用程序不能满足用户的期望，因为它不能像静态网页那样和浏览器进行交互。很明显，对 Ajax 应用程序不能与浏览器相结合的情况不合用户的心意。例如，用户想通过返回和前进的指令让浏览器能够回退到之前浏览过的某个页面。因为 Ajax 应用程序通常是一个运行着 JavaScript 的单一页面，浏览器的历史记录需要从支持这个使用案例的应用程序中获取帮助。GWT 的历史记录机制可以更容易的支持历史记录功能。
 
 ## Number and Date Formatting<a id="DevGuideDateAndNumberFormat"></a>
 

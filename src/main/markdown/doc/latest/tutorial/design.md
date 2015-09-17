@@ -1,54 +1,52 @@
-Design
+设计
 ===
 
-At this point, you've created the stub files you need to start coding StockWatcher.
+现在，您已经为 StockWatcher 应用程序的编码工作做了一些铺垫，即创建了桩文件。
 
-In this section, you'll review the functional requirements and design the user interface.
+在这一小节中，您要检查功能需求并设计用户界面。
 
-1.  [Examine the functional requirements.](#requirements)
-2.  [Identify the elements of the UI design.](#elements)
+1.  [检查功能需求。](#requirements)
+2.  [确定 UI 设计的元素。](#elements)
 
-##  Examining the functional requirements <a id="requirements"></a>
+##  检查功能需求 <a id="requirements"></a>
 
-Initially you want the StockWatcher application to do six things.
+首先，您想要 StockWatcher 应用程序做到六件事情。
 
-*   Provide users with the ability to add stocks. (Supply simple validation on input for illegal characters or existing stock.)
-*   Display the following information for each stock: symbol, price, change since last refresh.
-*   Provide users with the ability to delete a stock from the list.
-*   Refresh the stock price.
-*   Calculate the change since the last refresh as both a number and a percentage.
-*   Display a timestamp indicating the last update.
+*   为用户提供添加股票的功能。（做一些简单的验证，例如不合法的字符以及已经存在的股票代号。）
+*   为每一支股票显示出以下信息：股票代号，价格，自上次刷新后的改变。
+*   为用户提供在列表中删除股票的能力。
+*   刷新股票价格。
+*   计算自上次刷新后的改变，以数值和百分比的形式呈现出来。
+*   显示代表了最后一次更新的时间戳。
 
 
-##  Identifying the elements of the UI design <a id="elements"></a>
+##  确定 UI 设计的元素。 <a id="elements"></a>
 
 ![StockWatcher completed](images/DesignStockWatcherFinal.png)
 
-After studying StockWatcher's functional requirements, you decide you need these UI elements:
+在了解了 StockWatcher 的功能需求之后，您可能会需要这些 UI 元素：
 
-*   a table to hold the stock data
-*   two buttons, one to add stocks and one to remove them
-*   an input box to enter the stock code
-*   a timestamp to show the time and date of the last refresh
+*   一张用于掌管股票数据的表格
+*   两个按扭，分别用于添加和删除股票
+*   一个用户输入股票代码的输入框
+*   一个时间戳，它使用于显示最后一次刷新的时间和日期的。
 
-The design team has suggested the following additions:
+该项目最好还要加上如下附加物：
 
-*   a logo
-*   a header
-*   colors to indicate whether the change in price was positive or negative
+*   一个 logo
+*   一个 标题头
+*   用于标记股票价钱是升还是降的颜色
 
-### Including Static Elements
+### 添加静态元素
 
-GWT does not dictate how you lay out your HTML page. A GWT application
-can take up the entire browser window, as it does in the startup
-application, or it can be embedded in an existing page, as it is in the Build a Sample GWT Application page of this tutorial.
+GWT 不会指定您如何为您的 HTML 页面进行布局。一个 GWT 应用程序会占据整个浏览器窗口，和在启动应用程序时一样，或者这个页面还可以嵌入到一个已经存在的页面中，就想本教程中的编译一个 GWT 应用程序页面中呈现出来的那样。
 
-The StockWatcher application contains both static and dynamic elements. The Google Code logo and the header "StockWatcher" are static elements in the HTML host page. All the other elements are created programmatically using GWT widgets and panels.
+StockWatcher 应用程序包含了既包含了静态的元素又包含了动态的元素。Google 代码的 logo 和标题头的 "StockWatcher" 字样就是 HTML 首页面中的静态元素。其它的所有元素会使用 GWT 的界面工具集和面板并以编程的方式创建出来。
 
-## What's Next
+## 下面做什么
 
-At this point you've reviewed StockWatcher's functional requirements. You have a clear idea of what StockWatcher does. You know what UI elements you need to implement and how you want to lay them out.
+现在您已经复习了 StockWatcher 的功能需求。我想您已经对 StockWatcher 是做什么的已经有所了解了。您也知道了您需要去完成什么 UI 元素以及如何为它们布局。
 
-Now you're ready to build the user interface using GWT widgets and panels.
+现在您应该已经准备好使用 GWT 的界面工具集和面板来编译用户接口了。
 
-[Step 3: Building the User Interface](buildui.html)
+[步骤 3: 编译用户界面](buildui.html)
